@@ -7,7 +7,18 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def even_odd(A):
-    # TODO - you fill in here.
+    even_pointer = 0
+    odd_pointer = len(A) - 1
+
+    while even_pointer < odd_pointer:
+        if A[even_pointer] % 2 ==0 :
+            #even
+            even_pointer += 1
+        else:
+            #odd
+            A[even_pointer],A[odd_pointer] = A[odd_pointer],A[even_pointer]
+            odd_pointer += -1
+
     return
 
 
